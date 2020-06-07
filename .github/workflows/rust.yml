@@ -43,9 +43,12 @@ jobs:
       run: cargo build --verbose -Z unstable-options --out-dir artifacts
     - name: Run tests
       run: cargo test --verbose
+    - name: Zip artifacts
+      uses: montudor/action-zip@v0.1.0
+      with:
+        args: zip -qq r ${{ github.workspace }}/artifacts.zip ${{ github.workspace }}/artifacts
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
-      if: success()
       with:
-        path: ${{ github.workspace }}/artifacts
+        path: ${{ github.workspace }}/artifacts.zip
         name: ${{ matrix.os }}-${{ github.run_number }}
