@@ -23,7 +23,7 @@ jobs:
       uses: ashutoshvarma/setup-ninja@master
     - name: Install dependencies
       if: matrix.os == 'ubuntu-latest'
-      run: sudo apt-get update && sudo apt-get install libudev-dev alsa
+      run: sudo apt-get update && sudo apt-get install libudev-dev alsa-lib
     - name: Build
       run: cargo build --verbose
     - name: Run tests
