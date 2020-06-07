@@ -7,3 +7,18 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+winit = "0.22.1"
+vulkano-win = "0.19.0"
+vulkano = "0.19.0"
+vulkano-shaders = "0.19.0"
+serde = { version = "1.0.106", features = ["derive"] }
+nalgebra = "0.21.0"
+ncollide3d = "0.23.0"
+nphysics3d = "0.15.0"
+wavefront_obj = "7.0.0"
+collada = "0.12.0"
+tokio = { version = "0.2", features = ["full"] }
+futures = "0.3"
+cpal = "0.11.0"
+gilrs = "0.7.4"
+specs = "0.16.1"
