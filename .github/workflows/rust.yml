@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest] # Remove macOS support temporarily due to https://github.com/actions/upload-artifact/issues/76
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
     - uses: actions/checkout@v2
@@ -44,7 +44,7 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
     - name: Upload artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v1
       with:
         path: ${{ github.workspace }}/artifacts
         name: ${{ matrix.os }}-${{ github.run_number }}
