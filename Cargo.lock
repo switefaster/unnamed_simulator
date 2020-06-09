@@ -73,6 +73,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cff77d8686867eceff3105329d4698d96c2391c176d5d03adc90c7389162b5b8"
 
 [[package]]
+name = "assets_manager"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bcf2fe37dbef6adc8b97752d3cf443de2b82b64d19ea7fe5b68c2224815bfe50"
+dependencies = [
+ "ahash",
+]
+
+[[package]]
 name = "atom"
 version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1993,6 +2002,7 @@ checksum = "826e7639553986605ec5979c7dd957c7895e93eabed50ab2ffa7f6128a75097c"
 name = "unnamed_simulator"
 version = "0.1.0"
 dependencies = [
+ "assets_manager",
  "collada",
  "cpal",
  "futures",
